@@ -10,6 +10,7 @@ dropdowns.forEach(dropdown => {
 	const menu = dropdown.querySelector('.menu');
 	const options = dropdown.querySelectorAll('.menu li');
 	const selected = dropdown.querySelector('.selected');
+	const open = document.getElementById("open")
 	
 	
 	selectid.addEventListener('click', () =>{
@@ -18,7 +19,8 @@ dropdowns.forEach(dropdown => {
 		
 		caret.classList.toggle('caret-rotate');
 		
-		menu.classList.toggle('menu-open');
+		open.classList.toggle('hidden');
+		open.classList.toggle('opacity-0');
 		
 	});
 	
@@ -28,7 +30,7 @@ dropdowns.forEach(dropdown => {
 			
 			selected.innerText = option.innerText;
 			
-			select.classList.remove('select-clicked');
+			// select.classList.remove('select-clicked');
 			
 			caret.classList.remove('caret-rotate');
 			
